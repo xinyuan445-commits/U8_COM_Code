@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>U8 材料出库 API 配置</title>
+  <style>
+    body{margin:0;background:#f3f6fa;color:#233044;font:14px "Microsoft YaHei UI",sans-serif}
+    main{max-width:1050px;margin:28px auto;padding:0 18px}
+    h1{margin:0 0 6px;color:#164b7a}.sub{color:#65758b;margin-bottom:22px}
+    .card{background:#fff;border:1px solid #dce4ee;border-radius:10px;padding:20px;margin-bottom:16px;box-shadow:0 2px 8px #2030400b}
+    .grid{display:grid;grid-template-columns:repeat(3,minmax(190px,1fr));gap:14px}
+    label{display:block;color:#526176;font-size:13px}input,select{box-sizing:border-box;width:100%;margin-top:5px;padding:9px;border:1px solid #bdc9d8;border-radius:6px;background:#fff}
+    button{border:0;border-radius:6px;padding:10px 16px;margin:5px 8px 0 0;background:#1769aa;color:#fff;cursor:pointer}
+    button.secondary{background:#52677f}button.warn{background:#a96512}
+    #status{white-space:pre-wrap;background:#142033;color:#dce8f5;padding:14px;border-radius:8px;min-height:52px}
+    .secret{background:#fff8e9}.full{grid-column:1/-1}@media(max-width:760px){.grid{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+<main>
+  <h1>U8 材料出库 API 配置</h1>
+  <div class="sub">本页面只允许在服务器本机访问。密码以 DPAPI 密文保存。</div>
+
+  <section class="card">
+    <h2>配置管理</h2>
+    <div class="grid">
+      <label>当前管理密码<input id="adminHeader" type="password" autocomplete="current-password"></label>
+      <label>首次设置管理密码（至少12位）<input id="adminPassword" type="password" autocomplete="new-password"></label>
+      <label>U8 测试日期<input id="testDate" value=""></label>
+    </div>
+  </section>
+
+  <section class="card">
+    <h2>SQL Server</h2>
+    <div class="grid">
+      <label>服务器<input id="sqlServer"></label>
+      <label>数据库
+        <select id="sqlDatabase"></select>
+        <button type="button" class="secondary" onclick="loadDatabases()">读取账套数据库</button>
+      </label>
+      <label>用户名<input id="sqlUser"></label>
+      <label class="secret">密码（留空保留原密码）<input id="sqlPassword" type="password"></label>
+    </div>
+  </section>
+
+  <section class="card">
+    <h2>U8 登录</h2>
+    <div class="grid">
+      <label>U8服务器<input id="u8Server"></label>
+      <label>AccID<input id="u8AccId"></label>
+      <label>年度<input id="u8Year"></label>
+      <label>模块<input id="u8SubId"></label>
+      <label>操作员<input id="u8UserId"></label>
+      <label class="secret">密码（留空保留原密码）<input id="u8Password" type="password"></label>
+      <label>Serial<input id="u8Serial"></label>
+    </div>
+  </section>
+
+  <section class="card">
+    <h2>材料出库默认值</h2>
+    <div class="grid">
+      <label>仓库编码<input id="warehouseCode"></label>
+      <label>货位编码<input id="positionCode"></label>
+      <label>制单人<input id="maker"></label>
+      <label>默认部门（空则报错）<input id="defaultDepartmentCode"></label>
+      <label>工作中心<input id="workCenterCode"></label>
+      <label>收发类别<input id="rdCode"></label>
+      <label>单据模板 ID<input id="voucherTemplateId" type="number"></label>
+      <label>默认单价<input id="defaultUnitCost" type="number" step="0.000001"></label>
+      <label>当前 API Key<input id="apiKeyMasked" readonly></label>
+    </div>
+  </section>
+
+  <section class="card">
+    <h2>形态转换固定参数</h2>
+    <p class="sub">按 FastAPI 的 U8_DATABASE 自动选择。保存前会在对应账套校验部门、收发类别和模板。</p>
+    <div class="grid">
+      <label>008 部门<input id="shape008DepartmentCode"></label>
+      <label>008 入库类别<input id="shape008InboundRdCode"></label>
+      <label>008 出库类别<input id="shape008OutboundRdCode"></label>
+      <label>008 模板 ID<input id="shape008VoucherTemplateId" type="number"></label>
+      <label>998 部门<input id="shape998DepartmentCode"></label>
+      <label>998 入库类别<input id="shape998InboundRdCode"></label>
+      <label>998 出库类别<input id="shape998OutboundRdCode"></label>
+      <label>998 模板 ID<input id="shape998VoucherTemplateId" type="number"></label>
+    </div>
+  </section>
+
+  <section class="card">
+    <button onclick="loadConfig()">读取配置</button>
+    <button class="secondary" onclick="callApi('test-sql')">测试 SQL</button>
+    <button class="secondary" onclick="callApi('test-u8')">测试 U8</button>
+    <button onclick="callApi('save')">保存并应用</button>
+    <button class="warn" onclick="rotateKey()">轮换 API Key</button>
+    <p id="status">等待操作。</p>
+  </section>
+</main>
+<script>
+const ids=['sqlServer','sqlDatabase','sqlUser','sqlPassword','u8Server','u8AccId','u8Year','u8SubId','u8UserId','u8Password','u8Serial','warehouseCode','positionCode','maker','defaultDepartmentCode','workCenterCode','rdCode','voucherTemplateId','defaultUnitCost','shape008DepartmentCode','shape008InboundRdCode','shape008OutboundRdCode','shape008VoucherTemplateId','shape998DepartmentCode','shape998InboundRdCode','shape998OutboundRdCode','shape998VoucherTemplateId','adminPassword','testDate'];
+const el=id=>document.getElementById(id);
+el('testDate').value=new Date().toISOString().slice(0,10);
+const headers=()=>({'Content-Type':'application/json','X-Admin-Password':el('adminHeader').value});
+const status=value=>el('status').textContent=typeof value==='string'?value:JSON.stringify(value,null,2);
+function payload(){const x={};ids.forEach(id=>x[id]=el(id).value);x.voucherTemplateId=Number(x.voucherTemplateId||65);x.defaultUnitCost=Number(x.defaultUnitCost||0);x.shape008VoucherTemplateId=Number(x.shape008VoucherTemplateId||91);x.shape998VoucherTemplateId=Number(x.shape998VoucherTemplateId||91);return x}
+async function parse(r){const text=await r.text();let data;try{data=JSON.parse(text)}catch{data={message:text}}if(!r.ok)throw new Error((data.code||r.status)+'：'+(data.message||text));return data}
+function selectValue(id,value){const node=el(id);if(!node)return;if(node.tagName==='SELECT'&&value&&!Array.from(node.options).some(x=>x.value===value))node.add(new Option(value,value));node.value=value??''}
+async function loadConfig(){try{status('读取中…');const d=await parse(await fetch('api/config',{headers:headers()}));Object.keys(d.data).forEach(k=>{if(el(k)&&!['sqlPassword','u8Password'].includes(k))selectValue(k,d.data[k])});status(d)}catch(e){status(e.message)}}
+async function loadDatabases(){try{status('正在读取账套数据库…');const current=el('sqlDatabase').value;const d=await parse(await fetch('api/databases',{method:'POST',headers:headers(),body:JSON.stringify(payload())}));el('sqlDatabase').innerHTML='';(d.data.databases||[]).forEach(x=>el('sqlDatabase').add(new Option(x,x)));if(current&&Array.from(el('sqlDatabase').options).some(x=>x.value===current))el('sqlDatabase').value=current;status(d)}catch(e){status(e.message)}}
+async function callApi(action){try{status('执行中，请勿重复点击…');const d=await parse(await fetch('api/'+action,{method:'POST',headers:headers(),body:JSON.stringify(payload())}));if(d.data&&d.data.apiKey){el('apiKeyMasked').value=d.data.apiKey;status(d.message+'\\n\\n请立即复制保存本次显示的 API Key：\\n'+d.data.apiKey)}else status(d)}catch(e){status(e.message)}}
+async function rotateKey(){if(!confirm('旧 API Key 会立即失效，确认轮换？'))return;try{const d=await parse(await fetch('api/rotate-key',{method:'POST',headers:headers()}));el('apiKeyMasked').value=d.data.apiKey;status(d.message+'\\n\\n新 API Key：\\n'+d.data.apiKey)}catch(e){status(e.message)}}
+loadConfig();
+</script>
+</body>
+</html>

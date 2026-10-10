@@ -1,0 +1,298 @@
+<xml xmlns:s="uuid:BDC6E3F0-6DA3-11d1-A2A3-00AA00C14882" xmlns:dt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882" xmlns:rs="urn:schemas-microsoft-com:rowset" xmlns:z="#RowsetSchema">
+	<s:Schema id="RowsetSchema">
+		<s:ElementType name="row" content="eltOnly" rs:updatable="true">
+			<s:AttributeType name="id" rs:number="1" rs:writeunknown="true" rs:basecatalog=" " rs:basetable="rdrecord11" rs:basecolumn="id" rs:keycolumn="true">
+				<s:datatype dt:type="i8" dt:maxLength="8" rs:precision="19" rs:fixedlength="true" rs:maybenull="false"/>
+			</s:AttributeType>
+			<s:AttributeType name="brdflag" rs:number="2" rs:writeunknown="true" rs:basecatalog=" " rs:basetable="rdrecord11" rs:basecolumn="brdflag">
+				<s:datatype dt:type="ui1" dt:maxLength="1" rs:precision="3" rs:fixedlength="true" rs:maybenull="false"/>
+			</s:AttributeType>
+			<s:AttributeType name="cvouchtype" rs:number="3" rs:writeunknown="true" rs:basecatalog=" " rs:basetable="rdrecord11" rs:basecolumn="cvouchtype">
+				<s:datatype dt:type="string" dt:maxLength="2" rs:maybenull="false"/>
+			</s:AttributeType>
+			<s:AttributeType name="csysbarcode" rs:number="4" rs:nullable="true" rs:writeunknown="true" rs:basecatalog=" " rs:basetable="rdrecord11" rs:basecolumn="csysbarcode">
+				<s:datatype dt:type="string" dt:maxLength="60"/>
+			</s:AttributeType>
+			<s:AttributeType name="cwhcode" rs:number="5" rs:writeunknown="true" rs:basecatalog=" " rs:basetable="rdrecord11" rs:basecolumn="cwhcode">
+				<s:datatype dt:type="string" dt:maxLength="10" rs:maybenull="false"/>
+			</s:AttributeType>
+			<s:AttributeType name="ddate" rs:number="6" rs:writeunknown="true" rs:basecatalog=" " rs:basetable="rdrecord11" rs:basecolumn="ddate">
+				<s:datatype dt:type="dateTime" rs:dbtype="timestamp" dt:maxLength="16" rs:scale="3" rs:precision="23" rs:fixedlength="true" rs:maybenull="false"/>
+			</s:AttributeType>
+			<s:AttributeType name="ccode" rs:number="7" rs:writeunknown="true" rs:basecatalog=" " rs:basetable="rdrecord11" rs:basecolumn="ccode">
+				<s:datatype dt:type="string" dt:maxLength="30" rs:maybenull="false"/>
+			</s:AttributeType>
+			<s:AttributeType name="crdcode" rs:number="8" rs:nullable="true" rs:writeunknown="true" rs:basecatalog=" " rs:basetable="rdrecord11" rs:basecolumn="crdcode">
+				<s:datatype dt:type="string" dt:maxLength="5"/>
+			</s:AttributeType>
+			<s:AttributeType name="cdepcode" rs:number="9" rs:nullable="true" rs:writeunknown="true" rs:basecatalog=" " rs:basetable="rdrecord11" rs:basecolumn="cdepcode">
+				<s:datatype dt:type="string" dt:maxLength="12"/>
+			</s:AttributeType>
+			<s:AttributeType name="cpersoncode" rs:number="10" rs:nullable="true" rs:writeunknown="true" rs:basecatalog=" " rs:basetable="rdrecord11" rs:basecolumn="cpersoncode">
+				<s:datatype dt:type="string" dt:maxLength="20"/>
+			</s:AttributeType>
+			<s:AttributeType name="cprobatch" rs:number="11" rs:nullable="true" rs:writeunknown="true" rs:basecatalog=" " rs:basetable="rdrecord11" rs:basecolumn="cprobatch">
+				<s:datatype dt:type="string" dt:maxLength="60"/>
+			</s:AttributeType>
+			<s:AttributeType name="chandler" rs:number="12" rs:nullable="true" rs:writeunknown="true" rs:basecatalog=" " rs:basetable="rdrecord11" rs:basecolumn="chandler">
+				<s:datatype dt:type="string" dt:maxLength="20"/>
+			</s:AttributeType>
+			<s:AttributeType name="cmemo" rs:number="13" rs:nullable="true" rs:writeunknown="true" rs:basecatalog=" " rs:basetable="rdrecord11" rs:basecolumn="cmemo">
+				<s:datatype dt:type="string" dt:maxLength="255"/>
+			</s:AttributeType>
+			<s:AttributeType name="caccounter" rs:number="14" rs:nullable="true" rs:writeunknown="true" rs:basecatalog=" " rs:basetable="rdrecord11" rs:basecolumn="caccounter">
+				<s:datatype dt:type="string" dt:maxLength="20"/>
+			</s:AttributeType>
+			<s:AttributeType name="cmaker" rs:number="15" rs:nullable="true" rs:writeunknown="true" rs:basecatalog=" " rs:basetable="rdrecord11" rs:basecolumn="cmaker">
+				<s:datatype dt:type="string" dt:maxLength="20"/>
+			</s:AttributeType>
+			<s:AttributeType name="cdefine1" rs:number="16" rs:nullable="true" rs:writeunknown="true" rs:basecatalog=" " rs:basetable="rdrecord11" rs:basecolumn="cdefine1">
+				<s:datatype dt:type="string" dt:maxLength="20"/>
+			</s:AttributeType>
+			<s:AttributeType name="cdefine2" rs:number="17" rs:nullable="true" rs:writeunknown="true" rs:basecatalog=" " rs:basetable="rdrecord11" rs:basecolumn="cdefine2">
+				<s:datatype dt:type="string" dt:maxLength="20"/>
+			</s:AttributeType>
+			<s:AttributeType name="cdefine3" rs:number="18" rs:nullable="true" rs:writeunknown="true" rs:basecatalog=" " rs:basetable="rdrecord11" rs:basecolumn="cdefine3">
+				<s:datatype dt:type="string" dt:maxLength="20"/>
+			</s:AttributeType>
+			<s:AttributeType name="cdefine4" rs:number="19" rs:nullable="true" rs:writeunknown="true" rs:basecatalog=" " rs:basetable="rdrecord11" rs:basecolumn="cdefine4">
+				<s:datatype dt:type="dateTime" rs:dbtype="timestamp" dt:maxLength="16" rs:scale="3" rs:precision="23" rs:fixedlength="true"/>
+			</s:AttributeType>
+			<s:AttributeType name="cdefine5" rs:number="20" rs:nullable="true" rs:writeunknown="true" rs:basecatalog=" " rs:basetable="rdrecord11" rs:basecolumn="cdefine5">
+				<s:datatype dt:type="int" dt:maxLength="4" rs:precision="10" rs:fixedlength="true"/>
+			</s:AttributeType>
+			<s:AttributeType name="cdefine6" rs:number="21" rs:nullable="true" rs:writeunknown="true" rs:basecatalog=" " rs:basetable="rdrecord11" rs:basecolumn="cdefine6">
+				<s:datatype dt:type="dateTime" rs:dbtype="timestamp" dt:maxLength="16" rs:scale="3" rs:precision="23" rs:fixedlength="true"/>
+			</s:AttributeType>
+			<s:AttributeType name="cdefine7" rs:number="22" rs:nullable="true" rs:writeunknown="true" rs:basecatalog=" " rs:basetable="rdrecord11" rs:basecolumn="cdefine7">
+				<s:datatype dt:type="float" dt:maxLength="8" rs:precision="15" rs:fixedlength="true"/>
+			</s:AttributeType>
+			<s:AttributeType name="cdefine8" rs:number="23" rs:nullable="true" rs:writeunknown="true" rs:basecatalog=" " rs:basetable="rdrecord11" rs:basecolumn="cdefine8">
+				<s:datatype dt:type="string" dt:maxLength="4"/>
+			</s:AttributeType>
+			<s:AttributeType name="cdefine9" rs:number="24" rs:nullable="true" rs:writeunknown="true" rs:basecatalog=" " rs:basetable="rdrecord11" rs:basecolumn="cdefine9">
+				<s:datatype dt:type="string" dt:maxLength="8"/>
+			</s:AttributeType>
+			<s:AttributeType name="cdefine10" rs:number="25" rs:nullable="true" rs:writeunknown="true" rs:basecatalog=" " rs:basetable="rdrecord11" rs:basecolumn="cdefine10">
+				<s:datatype dt:type="string" dt:maxLength="60"/>
+			</s:AttributeType>
+			<s:AttributeType name="cwhname" rs:number="26" rs:nullable="true" rs:writeunknown="true" rs:basecatalog=" " rs:basetable="warehouse" rs:basecolumn="cwhname">
+				<s:datatype dt:type="string" dt:maxLength="20"/>
+			</s:AttributeType>
+			<s:AttributeType name="cdepname" rs:number="27" rs:nullable="true" rs:writeunknown="true" rs:basecatalog=" " rs:basetable="department" rs:basecolumn="cdepname">
+				<s:datatype dt:type="string" dt:maxLength="255"/>
+			</s:AttributeType>
+			<s:AttributeType name="cpersonname" rs:number="28" rs:nullable="true" rs:writeunknown="true" rs:basecatalog=" " rs:basetable="person" rs:basecolumn="cpersonname">
+				<s:datatype dt:type="string" dt:maxLength="40"/>
+			</s:AttributeType>
+			<s:AttributeType name="crdname" rs:number="29" rs:nullable="true" rs:writeunknown="true" rs:basecatalog=" " rs:basetable="rd_style" rs:basecolumn="crdname">
+				<s:datatype dt:type="string" dt:maxLength="12"/>
+			</s:AttributeType>
+			<s:AttributeType name="csource" rs:number="30" rs:writeunknown="true" rs:basecatalog=" " rs:basetable="rdrecord11" rs:basecolumn="csource">
+				<s:datatype dt:type="string" dt:maxLength="50" rs:maybenull="false"/>
+			</s:AttributeType>
+			<s:AttributeType name="cbustype" rs:number="31" rs:nullable="true" rs:writeunknown="true" rs:basecatalog=" " rs:basetable="rdrecord11" rs:basecolumn="cbustype">
+				<s:datatype dt:type="string" dt:maxLength="12"/>
+			</s:AttributeType>
+			<s:AttributeType name="cbuscode" rs:number="32" rs:nullable="true" rs:writeunknown="true" rs:basecatalog=" " rs:basetable="rdrecord11" rs:basecolumn="cbuscode">
+				<s:datatype dt:type="string" dt:maxLength="30"/>
+			</s:AttributeType>
+			<s:AttributeType name="dveridate" rs:number="33" rs:nullable="true" rs:writeunknown="true" rs:basecatalog=" " rs:basetable="rdrecord11" rs:basecolumn="dveridate">
+				<s:datatype dt:type="dateTime" rs:dbtype="timestamp" dt:maxLength="16" rs:scale="3" rs:precision="23" rs:fixedlength="true"/>
+			</s:AttributeType>
+			<s:AttributeType name="darvdate" rs:number="34" rs:nullable="true" rs:writeunknown="true" rs:basecatalog=" " rs:basetable="rdrecord11" rs:basecolumn="darvdate">
+				<s:datatype dt:type="dateTime" rs:dbtype="timestamp" dt:maxLength="16" rs:scale="3" rs:precision="23" rs:fixedlength="true"/>
+			</s:AttributeType>
+			<s:AttributeType name="cchkcode" rs:number="35" rs:nullable="true" rs:writeunknown="true" rs:basecatalog=" " rs:basetable="rdrecord11" rs:basecolumn="cchkcode">
+				<s:datatype dt:type="string" dt:maxLength="30"/>
+			</s:AttributeType>
+			<s:AttributeType name="dchkdate" rs:number="36" rs:nullable="true" rs:writeunknown="true" rs:basecatalog=" " rs:basetable="rdrecord11" rs:basecolumn="dchkdate">
+				<s:datatype dt:type="dateTime" rs:dbtype="timestamp" dt:maxLength="16" rs:scale="3" rs:precision="23" rs:fixedlength="true"/>
+			</s:AttributeType>
+			<s:AttributeType name="cchkperson" rs:number="37" rs:nullable="true" rs:writeunknown="true" rs:basecatalog=" " rs:basetable="rdrecord11" rs:basecolumn="cchkperson">
+				<s:datatype dt:type="string" dt:maxLength="40"/>
+			</s:AttributeType>
+			<s:AttributeType name="bisstqc" rs:number="38" rs:writeunknown="true" rs:basecatalog=" " rs:basetable="rdrecord11" rs:basecolumn="bisstqc">
+				<s:datatype dt:type="boolean" dt:maxLength="2" rs:fixedlength="true" rs:maybenull="false"/>
+			</s:AttributeType>
+			<s:AttributeType name="vt_id" rs:number="39" rs:nullable="true" rs:writeunknown="true" rs:basecatalog=" " rs:basetable="rdrecord11" rs:basecolumn="vt_id">
+				<s:datatype dt:type="int" dt:maxLength="4" rs:precision="10" rs:fixedlength="true"/>
+			</s:AttributeType>
+			<s:AttributeType name="cdefine11" rs:number="40" rs:nullable="true" rs:writeunknown="true" rs:basecatalog=" " rs:basetable="rdrecord11" rs:basecolumn="cdefine11">
+				<s:datatype dt:type="string" dt:maxLength="120"/>
+			</s:AttributeType>
+			<s:AttributeType name="cdefine12" rs:number="41" rs:nullable="true" rs:writeunknown="true" rs:basecatalog=" " rs:basetable="rdrecord11" rs:basecolumn="cdefine12">
+				<s:datatype dt:type="string" dt:maxLength="120"/>
+			</s:AttributeType>
+			<s:AttributeType name="cdefine13" rs:number="42" rs:nullable="true" rs:writeunknown="true" rs:basecatalog=" " rs:basetable="rdrecord11" rs:basecolumn="cdefine13">
+				<s:datatype dt:type="string" dt:maxLength="120"/>
+			</s:AttributeType>
+			<s:AttributeType name="cdefine14" rs:number="43" rs:nullable="true" rs:writeunknown="true" rs:basecatalog=" " rs:basetable="rdrecord11" rs:basecolumn="cdefine14">
+				<s:datatype dt:type="string" dt:maxLength="120"/>
+			</s:AttributeType>
+			<s:AttributeType name="cdefine15" rs:number="44" rs:nullable="true" rs:writeunknown="true" rs:basecatalog=" " rs:basetable="rdrecord11" rs:basecolumn="cdefine15">
+				<s:datatype dt:type="int" dt:maxLength="4" rs:precision="10" rs:fixedlength="true"/>
+			</s:AttributeType>
+			<s:AttributeType name="cdefine16" rs:number="45" rs:nullable="true" rs:writeunknown="true" rs:basecatalog=" " rs:basetable="rdrecord11" rs:basecolumn="cdefine16">
+				<s:datatype dt:type="float" dt:maxLength="8" rs:precision="15" rs:fixedlength="true"/>
+			</s:AttributeType>
+			<s:AttributeType name="imquantity" rs:number="46" rs:nullable="true" rs:writeunknown="true" rs:basecatalog=" " rs:basetable="rdrecord11" rs:basecolumn="imquantity">
+				<s:datatype dt:type="float" dt:maxLength="8" rs:precision="15" rs:fixedlength="true"/>
+			</s:AttributeType>
+			<s:AttributeType name="cpspcode" rs:number="47" rs:nullable="true" rs:writeunknown="true" rs:basecatalog=" " rs:basetable="rdrecord11" rs:basecolumn="cpspcode">
+				<s:datatype dt:type="string" dt:maxLength="60"/>
+			</s:AttributeType>
+			<s:AttributeType name="cinvname" rs:number="48" rs:nullable="true" rs:writeunknown="true" rs:basecatalog=" " rs:basetable="inventory" rs:basecolumn="cinvname">
+				<s:datatype dt:type="string" dt:maxLength="255"/>
+			</s:AttributeType>
+			<s:AttributeType name="cinvstd" rs:number="49" rs:nullable="true" rs:writeunknown="true" rs:basecatalog=" " rs:basetable="inventory" rs:basecolumn="cinvstd">
+				<s:datatype dt:type="string" dt:maxLength="255"/>
+			</s:AttributeType>
+			<s:AttributeType name="cinvaddcode" rs:number="50" rs:nullable="true" rs:writeunknown="true" rs:basecatalog=" " rs:basetable="inventory" rs:basecolumn="cinvaddcode">
+				<s:datatype dt:type="string" dt:maxLength="255"/>
+			</s:AttributeType>
+			<s:AttributeType name="hcinvdefine1" rs:number="51" rs:nullable="true" rs:writeunknown="true" rs:basecatalog=" " rs:basetable="inventory" rs:basecolumn="cInvDefine1">
+				<s:datatype dt:type="string" dt:maxLength="20"/>
+			</s:AttributeType>
+			<s:AttributeType name="hcinvdefine2" rs:number="52" rs:nullable="true" rs:writeunknown="true" rs:basecatalog=" " rs:basetable="inventory" rs:basecolumn="cInvDefine2">
+				<s:datatype dt:type="string" dt:maxLength="20"/>
+			</s:AttributeType>
+			<s:AttributeType name="hcinvdefine3" rs:number="53" rs:nullable="true" rs:writeunknown="true" rs:basecatalog=" " rs:basetable="inventory" rs:basecolumn="cInvDefine3">
+				<s:datatype dt:type="string" dt:maxLength="20"/>
+			</s:AttributeType>
+			<s:AttributeType name="hcinvdefine4" rs:number="54" rs:nullable="true" rs:writeunknown="true" rs:basecatalog=" " rs:basetable="inventory" rs:basecolumn="cInvDefine4">
+				<s:datatype dt:type="string" dt:maxLength="60"/>
+			</s:AttributeType>
+			<s:AttributeType name="hcinvdefine5" rs:number="55" rs:nullable="true" rs:writeunknown="true" rs:basecatalog=" " rs:basetable="inventory" rs:basecolumn="cInvDefine5">
+				<s:datatype dt:type="string" dt:maxLength="60"/>
+			</s:AttributeType>
+			<s:AttributeType name="hcinvdefine6" rs:number="56" rs:nullable="true" rs:writeunknown="true" rs:basecatalog=" " rs:basetable="inventory" rs:basecolumn="cInvDefine6">
+				<s:datatype dt:type="string" dt:maxLength="60"/>
+			</s:AttributeType>
+			<s:AttributeType name="hcinvdefine7" rs:number="57" rs:nullable="true" rs:writeunknown="true" rs:basecatalog=" " rs:basetable="inventory" rs:basecolumn="cInvDefine7">
+				<s:datatype dt:type="string" dt:maxLength="120"/>
+			</s:AttributeType>
+			<s:AttributeType name="hcinvdefine8" rs:number="58" rs:nullable="true" rs:writeunknown="true" rs:basecatalog=" " rs:basetable="inventory" rs:basecolumn="cInvDefine8">
+				<s:datatype dt:type="string" dt:maxLength="120"/>
+			</s:AttributeType>
+			<s:AttributeType name="hcinvdefine9" rs:number="59" rs:nullable="true" rs:writeunknown="true" rs:basecatalog=" " rs:basetable="inventory" rs:basecolumn="cInvDefine9">
+				<s:datatype dt:type="string" dt:maxLength="120"/>
+			</s:AttributeType>
+			<s:AttributeType name="hcinvdefine10" rs:number="60" rs:nullable="true" rs:writeunknown="true" rs:basecatalog=" " rs:basetable="inventory" rs:basecolumn="cInvDefine10">
+				<s:datatype dt:type="string" dt:maxLength="120"/>
+			</s:AttributeType>
+			<s:AttributeType name="hcinvdefine11" rs:number="61" rs:nullable="true" rs:writeunknown="true" rs:basecatalog=" " rs:basetable="inventory" rs:basecolumn="cInvDefine11">
+				<s:datatype dt:type="int" dt:maxLength="4" rs:precision="10" rs:fixedlength="true"/>
+			</s:AttributeType>
+			<s:AttributeType name="hcinvdefine12" rs:number="62" rs:nullable="true" rs:writeunknown="true" rs:basecatalog=" " rs:basetable="inventory" rs:basecolumn="cInvDefine12">
+				<s:datatype dt:type="int" dt:maxLength="4" rs:precision="10" rs:fixedlength="true"/>
+			</s:AttributeType>
+			<s:AttributeType name="hcinvdefine13" rs:number="63" rs:nullable="true" rs:writeunknown="true" rs:basecatalog=" " rs:basetable="inventory" rs:basecolumn="cInvDefine13">
+				<s:datatype dt:type="float" dt:maxLength="8" rs:precision="15" rs:fixedlength="true"/>
+			</s:AttributeType>
+			<s:AttributeType name="hcinvdefine14" rs:number="64" rs:nullable="true" rs:writeunknown="true" rs:basecatalog=" " rs:basetable="inventory" rs:basecolumn="cInvDefine14">
+				<s:datatype dt:type="float" dt:maxLength="8" rs:precision="15" rs:fixedlength="true"/>
+			</s:AttributeType>
+			<s:AttributeType name="hcinvdefine15" rs:number="65" rs:nullable="true" rs:writeunknown="true" rs:basecatalog=" " rs:basetable="inventory" rs:basecolumn="cInvDefine15">
+				<s:datatype dt:type="dateTime" rs:dbtype="timestamp" dt:maxLength="16" rs:scale="3" rs:precision="23" rs:fixedlength="true"/>
+			</s:AttributeType>
+			<s:AttributeType name="hcinvdefine16" rs:number="66" rs:nullable="true" rs:writeunknown="true" rs:basecatalog=" " rs:basetable="inventory" rs:basecolumn="cInvDefine16">
+				<s:datatype dt:type="dateTime" rs:dbtype="timestamp" dt:maxLength="16" rs:scale="3" rs:precision="23" rs:fixedlength="true"/>
+			</s:AttributeType>
+			<s:AttributeType name="cmpocode" rs:number="67" rs:nullable="true" rs:writeunknown="true" rs:basecatalog=" " rs:basetable="rdrecord11" rs:basecolumn="cmpocode">
+				<s:datatype dt:type="string" dt:maxLength="30"/>
+			</s:AttributeType>
+			<s:AttributeType name="bpufirst" rs:number="68" rs:nullable="true" rs:writeunknown="true" rs:basecatalog=" " rs:basetable="rdrecord11" rs:basecolumn="bpufirst">
+				<s:datatype dt:type="boolean" dt:maxLength="2" rs:fixedlength="true"/>
+			</s:AttributeType>
+			<s:AttributeType name="biafirst" rs:number="69" rs:nullable="true" rs:writeunknown="true" rs:basecatalog=" " rs:basetable="rdrecord11" rs:basecolumn="biafirst">
+				<s:datatype dt:type="boolean" dt:maxLength="2" rs:fixedlength="true"/>
+			</s:AttributeType>
+			<s:AttributeType name="cvencode" rs:number="70" rs:nullable="true" rs:writeunknown="true" rs:basecatalog=" " rs:basetable="rdrecord11" rs:basecolumn="cvencode">
+				<s:datatype dt:type="string" dt:maxLength="20"/>
+			</s:AttributeType>
+			<s:AttributeType name="cvenabbname" rs:number="71" rs:nullable="true" rs:writeunknown="true" rs:basecatalog=" " rs:basetable="vendor" rs:basecolumn="cvenabbname">
+				<s:datatype dt:type="string" dt:maxLength="60"/>
+			</s:AttributeType>
+			<s:AttributeType name="ivenauthid" rs:number="72" rs:nullable="true" rs:writeunknown="true" rs:basecatalog=" " rs:basetable="vendor" rs:basecolumn="iId">
+				<s:datatype dt:type="int" dt:maxLength="4" rs:precision="10" rs:fixedlength="true"/>
+			</s:AttributeType>
+			<s:AttributeType name="ipurorderid" rs:number="73" rs:nullable="true" rs:writeunknown="true" rs:basecatalog=" " rs:basetable="rdrecord11" rs:basecolumn="ipurorderid">
+				<s:datatype dt:type="i8" dt:maxLength="8" rs:precision="19" rs:fixedlength="true"/>
+			</s:AttributeType>
+			<s:AttributeType name="iproorderid" rs:number="74" rs:nullable="true" rs:writeunknown="true" rs:basecatalog=" " rs:basetable="rdrecord11" rs:basecolumn="iproorderid">
+				<s:datatype dt:type="int" dt:maxLength="4" rs:precision="10" rs:fixedlength="true"/>
+			</s:AttributeType>
+			<s:AttributeType name="biscomplement" rs:number="75" rs:writeunknown="true">
+				<s:datatype dt:type="i2" dt:maxLength="2" rs:precision="5" rs:fixedlength="true" rs:maybenull="false"/>
+			</s:AttributeType>
+			<s:AttributeType name="ipspauthid" rs:number="76" rs:nullable="true" rs:writeunknown="true" rs:basecatalog=" " rs:basetable="inventory" rs:basecolumn="iId">
+				<s:datatype dt:type="int" dt:maxLength="4" rs:precision="10" rs:fixedlength="true"/>
+			</s:AttributeType>
+			<s:AttributeType name="cproinvaddcode" rs:number="77" rs:nullable="true" rs:writeunknown="true" rs:basecatalog=" " rs:basetable="inventory" rs:basecolumn="cInvAddCode">
+				<s:datatype dt:type="string" dt:maxLength="255"/>
+			</s:AttributeType>
+			<s:AttributeType name="ireturncount" rs:number="78" rs:nullable="true" rs:writeunknown="true" rs:basecatalog=" " rs:basetable="rdrecord11" rs:basecolumn="ireturncount">
+				<s:datatype dt:type="int" dt:maxLength="4" rs:precision="10" rs:fixedlength="true"/>
+			</s:AttributeType>
+			<s:AttributeType name="iverifystate" rs:number="79" rs:nullable="true" rs:writeunknown="true" rs:basecatalog=" " rs:basetable="rdrecord11" rs:basecolumn="iverifystate">
+				<s:datatype dt:type="int" dt:maxLength="4" rs:precision="10" rs:fixedlength="true"/>
+			</s:AttributeType>
+			<s:AttributeType name="iswfcontrolled" rs:number="80" rs:nullable="true" rs:writeunknown="true" rs:basecatalog=" " rs:basetable="rdrecord11" rs:basecolumn="iswfcontrolled">
+				<s:datatype dt:type="int" dt:maxLength="4" rs:precision="10" rs:fixedlength="true"/>
+			</s:AttributeType>
+			<s:AttributeType name="ufts" rs:number="81" rs:nullable="true" rs:writeunknown="true">
+				<s:datatype dt:type="string" dt:maxLength="30" rs:fixedlength="true"/>
+			</s:AttributeType>
+			<s:AttributeType name="cmodifyperson" rs:number="82" rs:nullable="true" rs:writeunknown="true" rs:basecatalog=" " rs:basetable="rdrecord11" rs:basecolumn="cmodifyperson">
+				<s:datatype dt:type="string" dt:maxLength="50"/>
+			</s:AttributeType>
+			<s:AttributeType name="dmodifydate" rs:number="83" rs:nullable="true" rs:writeunknown="true" rs:basecatalog=" " rs:basetable="rdrecord11" rs:basecolumn="dmodifydate">
+				<s:datatype dt:type="dateTime" rs:dbtype="timestamp" dt:maxLength="16" rs:scale="3" rs:precision="23" rs:fixedlength="true"/>
+			</s:AttributeType>
+			<s:AttributeType name="dnmaketime" rs:number="84" rs:nullable="true" rs:writeunknown="true" rs:basecatalog=" " rs:basetable="rdrecord11" rs:basecolumn="dnmaketime">
+				<s:datatype dt:type="dateTime" rs:dbtype="timestamp" dt:maxLength="16" rs:scale="3" rs:precision="23" rs:fixedlength="true"/>
+			</s:AttributeType>
+			<s:AttributeType name="dnmodifytime" rs:number="85" rs:nullable="true" rs:writeunknown="true" rs:basecatalog=" " rs:basetable="rdrecord11" rs:basecolumn="dnmodifytime">
+				<s:datatype dt:type="dateTime" rs:dbtype="timestamp" dt:maxLength="16" rs:scale="3" rs:precision="23" rs:fixedlength="true"/>
+			</s:AttributeType>
+			<s:AttributeType name="dnverifytime" rs:number="86" rs:nullable="true" rs:writeunknown="true" rs:basecatalog=" " rs:basetable="rdrecord11" rs:basecolumn="dnverifytime">
+				<s:datatype dt:type="dateTime" rs:dbtype="timestamp" dt:maxLength="16" rs:scale="3" rs:precision="23" rs:fixedlength="true"/>
+			</s:AttributeType>
+			<s:AttributeType name="bomfirst" rs:number="87" rs:nullable="true" rs:writeunknown="true">
+				<s:datatype dt:type="ui1" dt:maxLength="1" rs:precision="3" rs:fixedlength="true"/>
+			</s:AttributeType>
+			<s:AttributeType name="bmotran" rs:number="88" rs:writeunknown="true">
+				<s:datatype dt:type="ui1" dt:maxLength="1" rs:precision="3" rs:fixedlength="true" rs:maybenull="false"/>
+			</s:AttributeType>
+			<s:AttributeType name="chinvsn" rs:number="89" rs:nullable="true" rs:writeunknown="true">
+				<s:datatype dt:type="string" dt:maxLength="60"/>
+			</s:AttributeType>
+			<s:AttributeType name="isourcerowno" rs:number="90" rs:nullable="true" rs:writeunknown="true">
+				<s:datatype dt:type="string" rs:dbtype="str" dt:maxLength="60"/>
+			</s:AttributeType>
+			<s:AttributeType name="iflowid" rs:number="91" rs:nullable="true" rs:writeunknown="true" rs:basecatalog=" " rs:basetable="rdrecord11" rs:basecolumn="iflowid">
+				<s:datatype dt:type="int" dt:maxLength="4" rs:precision="10" rs:fixedlength="true"/>
+			</s:AttributeType>
+			<s:AttributeType name="cflowname" rs:number="92" rs:nullable="true" rs:writeunknown="true" rs:basecatalog=" " rs:basetable="MMBizFlow" rs:basecolumn="cMMProcessDescribes">
+				<s:datatype dt:type="string" dt:maxLength="40"/>
+			</s:AttributeType>
+			<s:AttributeType name="bhyvouch" rs:number="93" rs:nullable="true" rs:writeunknown="true" rs:basecatalog=" " rs:basetable="rdrecord11" rs:basecolumn="bhyvouch">
+				<s:datatype dt:type="boolean" dt:maxLength="2" rs:fixedlength="true"/>
+			</s:AttributeType>
+			<s:AttributeType name="iPrintCount" rs:number="94" rs:nullable="true" rs:writeunknown="true" rs:basecatalog=" " rs:basetable="rdrecord11" rs:basecolumn="iPrintCount">
+				<s:datatype dt:type="int" dt:maxLength="4" rs:precision="10" rs:fixedlength="true"/>
+			</s:AttributeType>
+			<s:AttributeType name="ccurrentauditor" rs:number="95" rs:nullable="true" rs:writeunknown="true" rs:basecatalog=" " rs:basetable="rdrecord11" rs:basecolumn="ccurrentauditor">
+				<s:datatype dt:type="string" dt:maxLength="200"/>
+			</s:AttributeType>
+			<s:AttributeType name="editprop" rs:number="96" rs:writeunknown="true">
+				<s:datatype dt:type="string" dt:maxLength="2" rs:maybenull="false"/>
+			</s:AttributeType>
+			<s:extends type="rs:rowbase"/>
+		</s:ElementType>
+	</s:Schema>
+	<rs:data>
+		<z:row @z_row />
+	</rs:data>
+</xml>

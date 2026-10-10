@@ -1,0 +1,211 @@
+<xml xmlns:s="uuid:BDC6E3F0-6DA3-11d1-A2A3-00AA00C14882" xmlns:dt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882" xmlns:rs="urn:schemas-microsoft-com:rowset" xmlns:z="#RowsetSchema">
+	<s:Schema id="RowsetSchema">
+		<s:ElementType name="row" content="eltOnly" rs:updatable="true">
+			<s:AttributeType name="cvouchtype" rs:number="1" rs:writeunknown="true" rs:basecatalog="UFDATA_008_2021" rs:baseschema="dbo" rs:basetable="assemvouch" rs:basecolumn="cvouchtype">
+				<s:datatype dt:type="string" dt:maxLength="2" rs:maybenull="false"/>
+			</s:AttributeType>
+			<s:AttributeType name="davdate" rs:number="2" rs:writeunknown="true" rs:basecatalog="UFDATA_008_2021" rs:baseschema="dbo" rs:basetable="assemvouch" rs:basecolumn="davdate">
+				<s:datatype dt:type="dateTime" rs:dbtype="timestamp" dt:maxLength="16" rs:scale="3" rs:precision="23" rs:fixedlength="true" rs:maybenull="false"/>
+			</s:AttributeType>
+			<s:AttributeType name="id" rs:number="3" rs:writeunknown="true" rs:basecatalog="UFDATA_008_2021" rs:baseschema="dbo" rs:basetable="assemvouch" rs:basecolumn="id" rs:keycolumn="true">
+				<s:datatype dt:type="int" dt:maxLength="4" rs:precision="10" rs:fixedlength="true" rs:maybenull="false"/>
+			</s:AttributeType>
+			<s:AttributeType name="csysbarcode" rs:number="4" rs:nullable="true" rs:writeunknown="true" rs:basecatalog="UFDATA_008_2021" rs:baseschema="dbo" rs:basetable="assemvouch" rs:basecolumn="csysbarcode">
+				<s:datatype dt:type="string" dt:maxLength="60"/>
+			</s:AttributeType>
+			<s:AttributeType name="cavcode" rs:number="5" rs:nullable="true" rs:writeunknown="true" rs:basecatalog="UFDATA_008_2021" rs:baseschema="dbo" rs:basetable="assemvouch" rs:basecolumn="cavcode">
+				<s:datatype dt:type="string" dt:maxLength="30"/>
+			</s:AttributeType>
+			<s:AttributeType name="cdepcode" rs:number="6" rs:nullable="true" rs:writeunknown="true" rs:basecatalog="UFDATA_008_2021" rs:baseschema="dbo" rs:basetable="assemvouch" rs:basecolumn="cdepcode">
+				<s:datatype dt:type="string" dt:maxLength="12"/>
+			</s:AttributeType>
+			<s:AttributeType name="iavexpense" rs:number="7" rs:nullable="true" rs:writeunknown="true" rs:basecatalog="UFDATA_008_2021" rs:baseschema="dbo" rs:basetable="assemvouch" rs:basecolumn="iavexpense">
+				<s:datatype dt:type="float" dt:maxLength="8" rs:precision="15" rs:fixedlength="true"/>
+			</s:AttributeType>
+			<s:AttributeType name="cavmemo" rs:number="8" rs:nullable="true" rs:writeunknown="true" rs:basecatalog="UFDATA_008_2021" rs:baseschema="dbo" rs:basetable="assemvouch" rs:basecolumn="cavmemo">
+				<s:datatype dt:type="string" dt:maxLength="255"/>
+			</s:AttributeType>
+			<s:AttributeType name="cdefine1" rs:number="9" rs:nullable="true" rs:writeunknown="true" rs:basecatalog="UFDATA_008_2021" rs:baseschema="dbo" rs:basetable="assemvouch" rs:basecolumn="cdefine1">
+				<s:datatype dt:type="string" dt:maxLength="20"/>
+			</s:AttributeType>
+			<s:AttributeType name="cdefine2" rs:number="10" rs:nullable="true" rs:writeunknown="true" rs:basecatalog="UFDATA_008_2021" rs:baseschema="dbo" rs:basetable="assemvouch" rs:basecolumn="cdefine2">
+				<s:datatype dt:type="string" dt:maxLength="20"/>
+			</s:AttributeType>
+			<s:AttributeType name="cdefine3" rs:number="11" rs:nullable="true" rs:writeunknown="true" rs:basecatalog="UFDATA_008_2021" rs:baseschema="dbo" rs:basetable="assemvouch" rs:basecolumn="cdefine3">
+				<s:datatype dt:type="string" dt:maxLength="20"/>
+			</s:AttributeType>
+			<s:AttributeType name="cdefine4" rs:number="12" rs:nullable="true" rs:writeunknown="true" rs:basecatalog="UFDATA_008_2021" rs:baseschema="dbo" rs:basetable="assemvouch" rs:basecolumn="cdefine4">
+				<s:datatype dt:type="dateTime" rs:dbtype="timestamp" dt:maxLength="16" rs:scale="3" rs:precision="23" rs:fixedlength="true"/>
+			</s:AttributeType>
+			<s:AttributeType name="cdefine5" rs:number="13" rs:nullable="true" rs:writeunknown="true" rs:basecatalog="UFDATA_008_2021" rs:baseschema="dbo" rs:basetable="assemvouch" rs:basecolumn="cdefine5">
+				<s:datatype dt:type="int" dt:maxLength="4" rs:precision="10" rs:fixedlength="true"/>
+			</s:AttributeType>
+			<s:AttributeType name="cdefine6" rs:number="14" rs:nullable="true" rs:writeunknown="true" rs:basecatalog="UFDATA_008_2021" rs:baseschema="dbo" rs:basetable="assemvouch" rs:basecolumn="cdefine6">
+				<s:datatype dt:type="dateTime" rs:dbtype="timestamp" dt:maxLength="16" rs:scale="3" rs:precision="23" rs:fixedlength="true"/>
+			</s:AttributeType>
+			<s:AttributeType name="cdefine7" rs:number="15" rs:nullable="true" rs:writeunknown="true" rs:basecatalog="UFDATA_008_2021" rs:baseschema="dbo" rs:basetable="assemvouch" rs:basecolumn="cdefine7">
+				<s:datatype dt:type="float" dt:maxLength="8" rs:precision="15" rs:fixedlength="true"/>
+			</s:AttributeType>
+			<s:AttributeType name="cdefine8" rs:number="16" rs:nullable="true" rs:writeunknown="true" rs:basecatalog="UFDATA_008_2021" rs:baseschema="dbo" rs:basetable="assemvouch" rs:basecolumn="cdefine8">
+				<s:datatype dt:type="string" dt:maxLength="4"/>
+			</s:AttributeType>
+			<s:AttributeType name="cdefine9" rs:number="17" rs:nullable="true" rs:writeunknown="true" rs:basecatalog="UFDATA_008_2021" rs:baseschema="dbo" rs:basetable="assemvouch" rs:basecolumn="cdefine9">
+				<s:datatype dt:type="string" dt:maxLength="8"/>
+			</s:AttributeType>
+			<s:AttributeType name="cdefine10" rs:number="18" rs:nullable="true" rs:writeunknown="true" rs:basecatalog="UFDATA_008_2021" rs:baseschema="dbo" rs:basetable="assemvouch" rs:basecolumn="cdefine10">
+				<s:datatype dt:type="string" dt:maxLength="60"/>
+			</s:AttributeType>
+			<s:AttributeType name="cvouchname" rs:number="19" rs:nullable="true" rs:writeunknown="true" rs:basecatalog="UFDATA_008_2021" rs:baseschema="dbo" rs:basetable="vouchtype" rs:basecolumn="cvouchname">
+				<s:datatype dt:type="string" dt:maxLength="20"/>
+			</s:AttributeType>
+			<s:AttributeType name="cdepname" rs:number="20" rs:nullable="true" rs:writeunknown="true" rs:basecatalog="UFDATA_008_2021" rs:baseschema="dbo" rs:basetable="department" rs:basecolumn="cdepname">
+				<s:datatype dt:type="string" dt:maxLength="255"/>
+			</s:AttributeType>
+			<s:AttributeType name="cirdcode" rs:number="21" rs:nullable="true" rs:writeunknown="true" rs:basecatalog="UFDATA_008_2021" rs:baseschema="dbo" rs:basetable="assemvouch" rs:basecolumn="cirdcode">
+				<s:datatype dt:type="string" dt:maxLength="5"/>
+			</s:AttributeType>
+			<s:AttributeType name="cordcode" rs:number="22" rs:nullable="true" rs:writeunknown="true" rs:basecatalog="UFDATA_008_2021" rs:baseschema="dbo" rs:basetable="assemvouch" rs:basecolumn="cordcode">
+				<s:datatype dt:type="string" dt:maxLength="5"/>
+			</s:AttributeType>
+			<s:AttributeType name="cpersoncode" rs:number="23" rs:nullable="true" rs:writeunknown="true" rs:basecatalog="UFDATA_008_2021" rs:baseschema="dbo" rs:basetable="assemvouch" rs:basecolumn="cpersoncode">
+				<s:datatype dt:type="string" dt:maxLength="20"/>
+			</s:AttributeType>
+			<s:AttributeType name="caccounter" rs:number="24" rs:nullable="true" rs:writeunknown="true" rs:basecatalog="UFDATA_008_2021" rs:baseschema="dbo" rs:basetable="assemvouch" rs:basecolumn="caccounter">
+				<s:datatype dt:type="string" dt:maxLength="20"/>
+			</s:AttributeType>
+			<s:AttributeType name="cmaker" rs:number="25" rs:nullable="true" rs:writeunknown="true" rs:basecatalog="UFDATA_008_2021" rs:baseschema="dbo" rs:basetable="assemvouch" rs:basecolumn="cmaker">
+				<s:datatype dt:type="string" dt:maxLength="20"/>
+			</s:AttributeType>
+			<s:AttributeType name="crdname" rs:number="26" rs:nullable="true" rs:writeunknown="true" rs:basecatalog="UFDATA_008_2021" rs:baseschema="dbo" rs:basetable="rd_style" rs:basecolumn="crdname">
+				<s:datatype dt:type="string" dt:maxLength="12"/>
+			</s:AttributeType>
+			<s:AttributeType name="crdname_1" rs:number="27" rs:nullable="true" rs:writeunknown="true" rs:basecatalog="UFDATA_008_2021" rs:baseschema="dbo" rs:basetable="rd_style" rs:basecolumn="cRdName">
+				<s:datatype dt:type="string" dt:maxLength="12"/>
+			</s:AttributeType>
+			<s:AttributeType name="cpersonname" rs:number="28" rs:nullable="true" rs:writeunknown="true" rs:basecatalog="UFDATA_008_2021" rs:baseschema="dbo" rs:basetable="person" rs:basecolumn="cpersonname">
+				<s:datatype dt:type="string" dt:maxLength="40"/>
+			</s:AttributeType>
+			<s:AttributeType name="caccpcode" rs:number="29" rs:nullable="true" rs:writeunknown="true" rs:basecatalog="UFDATA_008_2021" rs:baseschema="dbo" rs:basetable="assemvouch" rs:basecolumn="caccpcode">
+				<s:datatype dt:type="string" dt:maxLength="60"/>
+			</s:AttributeType>
+			<s:AttributeType name="btransflag" rs:number="30" rs:nullable="true" rs:writeunknown="true" rs:basecatalog="UFDATA_008_2021" rs:baseschema="dbo" rs:basetable="assemvouch" rs:basecolumn="btransflag">
+				<s:datatype dt:type="boolean" dt:maxLength="2" rs:fixedlength="true"/>
+			</s:AttributeType>
+			<s:AttributeType name="vt_id" rs:number="31" rs:nullable="true" rs:writeunknown="true" rs:basecatalog="UFDATA_008_2021" rs:baseschema="dbo" rs:basetable="assemvouch" rs:basecolumn="vt_id">
+				<s:datatype dt:type="int" dt:maxLength="4" rs:precision="10" rs:fixedlength="true"/>
+			</s:AttributeType>
+			<s:AttributeType name="cverifyperson" rs:number="32" rs:nullable="true" rs:writeunknown="true" rs:basecatalog="UFDATA_008_2021" rs:baseschema="dbo" rs:basetable="assemvouch" rs:basecolumn="cverifyperson">
+				<s:datatype dt:type="string" dt:maxLength="20"/>
+			</s:AttributeType>
+			<s:AttributeType name="dverifydate" rs:number="33" rs:nullable="true" rs:writeunknown="true" rs:basecatalog="UFDATA_008_2021" rs:baseschema="dbo" rs:basetable="assemvouch" rs:basecolumn="dverifydate">
+				<s:datatype dt:type="dateTime" rs:dbtype="timestamp" dt:maxLength="16" rs:scale="3" rs:precision="23" rs:fixedlength="true"/>
+			</s:AttributeType>
+			<s:AttributeType name="cdefine11" rs:number="34" rs:nullable="true" rs:writeunknown="true" rs:basecatalog="UFDATA_008_2021" rs:baseschema="dbo" rs:basetable="assemvouch" rs:basecolumn="cdefine11">
+				<s:datatype dt:type="string" dt:maxLength="120"/>
+			</s:AttributeType>
+			<s:AttributeType name="cdefine12" rs:number="35" rs:nullable="true" rs:writeunknown="true" rs:basecatalog="UFDATA_008_2021" rs:baseschema="dbo" rs:basetable="assemvouch" rs:basecolumn="cdefine12">
+				<s:datatype dt:type="string" dt:maxLength="120"/>
+			</s:AttributeType>
+			<s:AttributeType name="cdefine13" rs:number="36" rs:nullable="true" rs:writeunknown="true" rs:basecatalog="UFDATA_008_2021" rs:baseschema="dbo" rs:basetable="assemvouch" rs:basecolumn="cdefine13">
+				<s:datatype dt:type="string" dt:maxLength="120"/>
+			</s:AttributeType>
+			<s:AttributeType name="cdefine14" rs:number="37" rs:nullable="true" rs:writeunknown="true" rs:basecatalog="UFDATA_008_2021" rs:baseschema="dbo" rs:basetable="assemvouch" rs:basecolumn="cdefine14">
+				<s:datatype dt:type="string" dt:maxLength="120"/>
+			</s:AttributeType>
+			<s:AttributeType name="cdefine15" rs:number="38" rs:nullable="true" rs:writeunknown="true" rs:basecatalog="UFDATA_008_2021" rs:baseschema="dbo" rs:basetable="assemvouch" rs:basecolumn="cdefine15">
+				<s:datatype dt:type="int" dt:maxLength="4" rs:precision="10" rs:fixedlength="true"/>
+			</s:AttributeType>
+			<s:AttributeType name="cdefine16" rs:number="39" rs:nullable="true" rs:writeunknown="true" rs:basecatalog="UFDATA_008_2021" rs:baseschema="dbo" rs:basetable="assemvouch" rs:basecolumn="cdefine16">
+				<s:datatype dt:type="float" dt:maxLength="8" rs:precision="15" rs:fixedlength="true"/>
+			</s:AttributeType>
+			<s:AttributeType name="ufts" rs:number="40" rs:nullable="true" rs:writeunknown="true">
+				<s:datatype dt:type="string" dt:maxLength="30" rs:fixedlength="true"/>
+			</s:AttributeType>
+			<s:AttributeType name="cmodifyperson" rs:number="41" rs:nullable="true" rs:writeunknown="true" rs:basecatalog="UFDATA_008_2021" rs:baseschema="dbo" rs:basetable="assemvouch" rs:basecolumn="cmodifyperson">
+				<s:datatype dt:type="string" dt:maxLength="50"/>
+			</s:AttributeType>
+			<s:AttributeType name="dmodifydate" rs:number="42" rs:nullable="true" rs:writeunknown="true" rs:basecatalog="UFDATA_008_2021" rs:baseschema="dbo" rs:basetable="assemvouch" rs:basecolumn="dmodifydate">
+				<s:datatype dt:type="dateTime" rs:dbtype="timestamp" dt:maxLength="16" rs:scale="3" rs:precision="23" rs:fixedlength="true"/>
+			</s:AttributeType>
+			<s:AttributeType name="dnmaketime" rs:number="43" rs:nullable="true" rs:writeunknown="true" rs:basecatalog="UFDATA_008_2021" rs:baseschema="dbo" rs:basetable="assemvouch" rs:basecolumn="dnmaketime">
+				<s:datatype dt:type="dateTime" rs:dbtype="timestamp" dt:maxLength="16" rs:scale="3" rs:precision="23" rs:fixedlength="true"/>
+			</s:AttributeType>
+			<s:AttributeType name="dnmodifytime" rs:number="44" rs:nullable="true" rs:writeunknown="true" rs:basecatalog="UFDATA_008_2021" rs:baseschema="dbo" rs:basetable="assemvouch" rs:basecolumn="dnmodifytime">
+				<s:datatype dt:type="dateTime" rs:dbtype="timestamp" dt:maxLength="16" rs:scale="3" rs:precision="23" rs:fixedlength="true"/>
+			</s:AttributeType>
+			<s:AttributeType name="dnverifytime" rs:number="45" rs:nullable="true" rs:writeunknown="true" rs:basecatalog="UFDATA_008_2021" rs:baseschema="dbo" rs:basetable="assemvouch" rs:basecolumn="dnverifytime">
+				<s:datatype dt:type="dateTime" rs:dbtype="timestamp" dt:maxLength="16" rs:scale="3" rs:precision="23" rs:fixedlength="true"/>
+			</s:AttributeType>
+			<s:AttributeType name="iPrintCount" rs:number="46" rs:nullable="true" rs:writeunknown="true" rs:basecatalog="UFDATA_008_2021" rs:baseschema="dbo" rs:basetable="assemvouch" rs:basecolumn="iPrintCount">
+				<s:datatype dt:type="int" dt:maxLength="4" rs:precision="10" rs:fixedlength="true"/>
+			</s:AttributeType>
+			<s:AttributeType name="cFree1" rs:number="47" rs:nullable="true" rs:writeunknown="true" rs:basecatalog="UFDATA_008_2021" rs:baseschema="dbo" rs:basetable="assemvouch" rs:basecolumn="cFree1">
+				<s:datatype dt:type="string" dt:maxLength="20"/>
+			</s:AttributeType>
+			<s:AttributeType name="cFree2" rs:number="48" rs:nullable="true" rs:writeunknown="true" rs:basecatalog="UFDATA_008_2021" rs:baseschema="dbo" rs:basetable="assemvouch" rs:basecolumn="cFree2">
+				<s:datatype dt:type="string" dt:maxLength="20"/>
+			</s:AttributeType>
+			<s:AttributeType name="cFree3" rs:number="49" rs:nullable="true" rs:writeunknown="true" rs:basecatalog="UFDATA_008_2021" rs:baseschema="dbo" rs:basetable="assemvouch" rs:basecolumn="cFree3">
+				<s:datatype dt:type="string" dt:maxLength="20"/>
+			</s:AttributeType>
+			<s:AttributeType name="cFree4" rs:number="50" rs:nullable="true" rs:writeunknown="true" rs:basecatalog="UFDATA_008_2021" rs:baseschema="dbo" rs:basetable="assemvouch" rs:basecolumn="cFree4">
+				<s:datatype dt:type="string" dt:maxLength="20"/>
+			</s:AttributeType>
+			<s:AttributeType name="cFree5" rs:number="51" rs:nullable="true" rs:writeunknown="true" rs:basecatalog="UFDATA_008_2021" rs:baseschema="dbo" rs:basetable="assemvouch" rs:basecolumn="cFree5">
+				<s:datatype dt:type="string" dt:maxLength="20"/>
+			</s:AttributeType>
+			<s:AttributeType name="cFree6" rs:number="52" rs:nullable="true" rs:writeunknown="true" rs:basecatalog="UFDATA_008_2021" rs:baseschema="dbo" rs:basetable="assemvouch" rs:basecolumn="cFree6">
+				<s:datatype dt:type="string" dt:maxLength="20"/>
+			</s:AttributeType>
+			<s:AttributeType name="cFree7" rs:number="53" rs:nullable="true" rs:writeunknown="true" rs:basecatalog="UFDATA_008_2021" rs:baseschema="dbo" rs:basetable="assemvouch" rs:basecolumn="cFree7">
+				<s:datatype dt:type="string" dt:maxLength="20"/>
+			</s:AttributeType>
+			<s:AttributeType name="cFree8" rs:number="54" rs:nullable="true" rs:writeunknown="true" rs:basecatalog="UFDATA_008_2021" rs:baseschema="dbo" rs:basetable="assemvouch" rs:basecolumn="cFree8">
+				<s:datatype dt:type="string" dt:maxLength="20"/>
+			</s:AttributeType>
+			<s:AttributeType name="cFree9" rs:number="55" rs:nullable="true" rs:writeunknown="true" rs:basecatalog="UFDATA_008_2021" rs:baseschema="dbo" rs:basetable="assemvouch" rs:basecolumn="cFree9">
+				<s:datatype dt:type="string" dt:maxLength="20"/>
+			</s:AttributeType>
+			<s:AttributeType name="cFree10" rs:number="56" rs:nullable="true" rs:writeunknown="true" rs:basecatalog="UFDATA_008_2021" rs:baseschema="dbo" rs:basetable="assemvouch" rs:basecolumn="cFree10">
+				<s:datatype dt:type="string" dt:maxLength="20"/>
+			</s:AttributeType>
+			<s:AttributeType name="ctransflag" rs:number="57" rs:nullable="true" rs:writeunknown="true" rs:basecatalog="UFDATA_008_2021" rs:baseschema="dbo" rs:basetable="assemvouch" rs:basecolumn="ctransflag">
+				<s:datatype dt:type="string" dt:maxLength="2"/>
+			</s:AttributeType>
+			<s:AttributeType name="ireturncount" rs:number="58" rs:nullable="true" rs:writeunknown="true" rs:basecatalog="UFDATA_008_2021" rs:baseschema="dbo" rs:basetable="assemvouch" rs:basecolumn="ireturncount">
+				<s:datatype dt:type="int" dt:maxLength="4" rs:precision="10" rs:fixedlength="true"/>
+			</s:AttributeType>
+			<s:AttributeType name="iverifystate" rs:number="59" rs:nullable="true" rs:writeunknown="true" rs:basecatalog="UFDATA_008_2021" rs:baseschema="dbo" rs:basetable="assemvouch" rs:basecolumn="iverifystate">
+				<s:datatype dt:type="int" dt:maxLength="4" rs:precision="10" rs:fixedlength="true"/>
+			</s:AttributeType>
+			<s:AttributeType name="iswfcontrolled" rs:number="60" rs:nullable="true" rs:writeunknown="true" rs:basecatalog="UFDATA_008_2021" rs:baseschema="dbo" rs:basetable="assemvouch" rs:basecolumn="iswfcontrolled">
+				<s:datatype dt:type="int" dt:maxLength="4" rs:precision="10" rs:fixedlength="true"/>
+			</s:AttributeType>
+			<s:AttributeType name="ccurrentauditor" rs:number="61" rs:nullable="true" rs:writeunknown="true" rs:basecatalog="UFDATA_008_2021" rs:baseschema="dbo" rs:basetable="assemvouch" rs:basecolumn="ccurrentauditor">
+				<s:datatype dt:type="string" dt:maxLength="200"/>
+			</s:AttributeType>
+			<s:AttributeType name="csyssource" rs:number="62" rs:nullable="true" rs:writeunknown="true" rs:basecatalog="UFDATA_008_2021" rs:baseschema="dbo" rs:basetable="assemvouch" rs:basecolumn="csyssource">
+				<s:datatype dt:type="string" dt:maxLength="10"/>
+			</s:AttributeType>
+			<s:AttributeType name="csyssourceid" rs:number="63" rs:nullable="true" rs:writeunknown="true" rs:basecatalog="UFDATA_008_2021" rs:baseschema="dbo" rs:basetable="assemvouch" rs:basecolumn="csyssourceid">
+				<s:datatype dt:type="string" dt:maxLength="50"/>
+			</s:AttributeType>
+			<s:AttributeType name="csource" rs:number="64" rs:nullable="true" rs:writeunknown="true" rs:basecatalog="UFDATA_008_2021" rs:baseschema="dbo" rs:basetable="assemvouch" rs:basecolumn="csource">
+				<s:datatype dt:type="string" dt:maxLength="10"/>
+			</s:AttributeType>
+			<s:AttributeType name="editprop" rs:number="65" rs:writeunknown="true">
+				<s:datatype dt:type="string" rs:dbtype="str" dt:maxLength="2" rs:maybenull="false"/>
+			</s:AttributeType>
+			<s:AttributeType name="chdefine1" rs:number="66" rs:nullable="true" rs:writeunknown="true" rs:basecatalog="UFDATA_008_2021" rs:basetable="assemvouch_extradefine" rs:basecolumn="chdefine1">
+				<s:datatype dt:type="string" dt:maxLength="300"/>
+			</s:AttributeType>
+			<s:AttributeType name="chdefine2" rs:number="67" rs:nullable="true" rs:writeunknown="true" rs:basecatalog="UFDATA_008_2021" rs:basetable="assemvouch_extradefine" rs:basecolumn="chdefine2">
+				<s:datatype dt:type="string" dt:maxLength="400"/>
+			</s:AttributeType>
+			<s:extends type="rs:rowbase"/>
+		</s:ElementType>
+	</s:Schema>
+	<rs:data>
+    <z:row @z_row />
+  </rs:data>
+</xml>
